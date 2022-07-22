@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
      <meta name="description" content="Аренда голубей на мероприятие">
      <meta name="keywords" content="Аренда голубей на свадьбу, мероприятие" />
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
      <link type="Image/x-icon" href="favicon.ico" rel="icon">
+     <script src="/index.js"></script>
     <title>FISHKA</title>
 
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
@@ -14,7 +16,18 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
+<div class="loader-wrapper" style="z-index: 5;">
+  <div class="loader"></div>
+  <div class="loader-section section-left"></div>
+  <div class="loader-section section-right"></div>
+</div>
+	<script type="text/javascript">
+		window.addEventListener('load',function(){
+ 	    document.querySelector('body').classList.add("loaded")  
+		});
+	</script>
 		<section class="showcase">
 			<div class="video-container">
 				<!--<video src="video.mp4" preload="auto" no-controls autoplay loop playsinline muted></video>-->
@@ -23,7 +36,7 @@
    					<source src="video.webm" type='video/webm; codecs="vp8, vorbis"' />
    					<source src="video.ogv" type='video/ogg; codecs="theora, vorbis"' />
   				</video>-->
-  				<img src="video.gif" width="100%" height="100%;">
+  				<img id="fon" src="video.gif" width="100%" height="100%">
 			</div>
 			<div class="content">
 				<div style="padding: 0px; background: transparent;">
@@ -110,7 +123,8 @@
 					<p id="plus1" style="border-bottom: 1px solid white !important; font-family: 'Open Sans', sans-serif;">MEDIUM 20%</p>
 				</div>
 			</div>
-			<p id="pri" style="max-width: fit-content; margin: 10px auto"><span id="yl"> 499 МРЦ</span></p>
+			<p id="pri" style="max-width: fit-content; margin: 10px auto;"><span id="yl"> 499 МРЦ</span></p>
+			<p id="pri" style="max-width: fit-content; margin: 0px auto;">оптовая цена от <span id="yl"> 1000</span> штук</p>
 			<div style="border: 4px solid #DEDEDE; max-width: fit-content; margin: 10px auto;"><p id="kv">21 X 15 Г</p></div>
 			<h2 style="margin: 10px 0;"><span style="color: #DBAD0F;">ПРЕИМУЩЕСТВА</span> ЖЕВАТЕЛЬНОГО ТАБАКА</h2>
 			<div class="plus1">
